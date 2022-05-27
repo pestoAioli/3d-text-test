@@ -26,7 +26,7 @@
   const textureLoader = new THREE.TextureLoader()
   
   const matcapTexture = textureLoader.load('/textures/matcaps/3.png');
-  const matcapTexture2 = textureLoader.load('/textures/matcaps/8.png');
+  const matcapTexture2 = textureLoader.load('/textures/matcaps/11.png');
   
   const fontLoader = new FontLoader();
   const donutMaterial = new THREE.MeshMatcapMaterial({ matcap: matcapTexture });
@@ -158,7 +158,7 @@
       renderer.render(scene, camera)
       torusGeometry.rotateX(0.02)
       torusGeometry.rotateY(0.02)
-      if(camera.position.z < 10){
+      if(camera.position.z < 6){
         camera.position.z += 0.01
       }
   
