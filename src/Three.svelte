@@ -1,24 +1,15 @@
 <script>
-  import * as THREE from 'three'
-  import { OrbitControls } from '../public/OrbitControls'
-  import * as dat from 'lil-gui'
-  import { FontLoader } from '../public/FontLoader'
-  import { TextGeometry } from '../public/TextGeometry'
-  
-  /**
-   * Base
-   */
-  // Debug
-  // const gui = new dat.GUI()
-  
+  import * as THREE from 'three';
+  import { OrbitControls } from '../public/OrbitControls';
+  import { FontLoader } from '../public/FontLoader';
+  import { TextGeometry } from '../public/TextGeometry';
+
   // Canvas
   const canvas = document.querySelector('canvas.webgl')
   
   // Scene
   const scene = new THREE.Scene()
   
-  // const axesHelper = new THREE.AxesHelper();
-  // scene.add(axesHelper);
   
   /**
    * Textures
@@ -55,15 +46,9 @@
           bevelOffset: 0,
           bevelSegments: 4
       })
-      // textGeometry.computeBoundingBox();  
-      // textGeometry.translate(
-      //     -(textGeometry.boundingBox.max.x - 0.02) * 0.5,
-      //     -(textGeometry.boundingBox.max.y - 0.02) * 0.5,
-      //     -textGeometry.boundingBox.max.z * 0.5,
-      // )
   
-      textGeometry.center(); // same as above lol
-      textGeometry2.center(); // same as above lol
+      textGeometry.center();
+      textGeometry2.center();
       const text = new THREE.Mesh(textGeometry, material);
       const text2 = new THREE.Mesh(textGeometry2, material);
       text2.position.y = -1;
@@ -89,24 +74,12 @@
   console.log(scene)
   
   /**
-   * Object
-   */
-  // const cube = new THREE.Mesh(
-  //     new THREE.BoxGeometry(1, 1, 1),
-  //     new THREE.MeshBasicMaterial()
-  // )
-  
-  // scene.add(cube)
-  
-  /**
-   * Sizes
+   * Responsive Canvas
    */
   const sizes = {
       width: window.innerWidth,
       height: window.innerHeight
   }
-  
-  
   window.addEventListener('resize', () => {
     // Update sizes
     sizes.width = window.innerWidth
@@ -132,7 +105,6 @@
   /**
    * Camera
    */
-  // Base camera
   const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
   camera.position.x = 1
   camera.position.y = 1
@@ -145,7 +117,7 @@
   
   
   /**
-   * Animate
+   * Animation
    */
   const clock = new THREE.Clock()
   
@@ -158,14 +130,12 @@
       renderer.render(scene, camera)
       torusGeometry.rotateX(0.02)
       torusGeometry.rotateY(0.02)
-      if(camera.position.z < 6){
+      if(camera.position.z < 7){
         camera.position.z += 0.01
       }
   
-      // Call tick again on the next frame
       window.requestAnimationFrame(tick)
   }
-  
   tick()
   </script>
   
