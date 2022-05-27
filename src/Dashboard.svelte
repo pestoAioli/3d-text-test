@@ -14,7 +14,7 @@
   <div transition:slide="{{duration: 2000}}"  class="dash">
     <p class="spiel">
       Hi!👋🏾 I'm Ricardo(he/him), an Artist turned Software Engineer. Here's a link to my <a href="https://docs.google.com/document/d/1lZwzIkmQ9zLCZkBPNV44exDTsqu7yV_jtPvMAEZE7NY/edit?usp=sharing">resume</a>
-      and here are links to my <a href="https://github.com/pestoAioli">GitHub</a> and <a href="https://linkedin/in/ricardomiguelriverachavez">LinkedIn</a>. Thanks for stopping by🙏🏽😍 <br>
+      and here are links to my <a href="https://github.com/pestoAioli">GitHub</a> and <a href="https://linkedin.com/in/ricardomiguelriverachavez">LinkedIn</a>. Thanks for stopping by🙏🏽😍 <br>
       Black Lives Matter👊🏿, Trans Lives Matter🏳️‍⚧️, Free Ukraine🇺🇦
     </p>
   </div>
