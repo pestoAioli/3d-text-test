@@ -26,7 +26,7 @@
   fontLoader.load('/fonts/helvetiker_regular.typeface.json', (font) => {
       const textGeometry = new TextGeometry('Ricardo Miguel Rivera-Chavez', {
           font,
-          size: 0.5,
+          size: 0.3,
           height: 0.2,
           curveSegments: 5,
           bevelEnabled: true,
@@ -37,7 +37,7 @@
       })
       const textGeometry2 = new TextGeometry('Software Engineer/Creative Developer', {
           font,
-          size: 0.5,
+          size: 0.3,
           height: 0.2,
           curveSegments: 5,
           bevelEnabled: true,
