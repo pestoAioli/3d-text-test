@@ -4,8 +4,7 @@
   const timingHack = () => {
     setTimeout(() => {
       timer = true;
-      console.log("not what u expected huh");
-    }, 5000);
+    }, 1500);
   };
   timingHack();
 
@@ -19,15 +18,15 @@
 </script>
 
 {#if timer}
-<div transition:slide="{{duration: 2000}}" class="boop" >
+<button transition:slide="{{duration: 1200}}" class="boop" >
   <p class="spiel" on:click={handleOpen}>ℹ</p>
-</div>
+</button>
 {/if}
 {#if open}
 <div transition:slide="{{duration: 2000}}"  class="dash">
   <p class="spiel">
     Hi!👋🏾 I'm Ricardo(he/him), an Artist and Software Engineer. Here's a link to my <a href="https://docs.google.com/document/d/1lZwzIkmQ9zLCZkBPNV44exDTsqu7yV_jtPvMAEZE7NY/edit?usp=sharing">resume</a>
-    and here are links to my <a href="https://github.com/pestoAioli">GitHub</a> and <a href="https://linkedin.com/in/ricardomiguelriverachavez">LinkedIn</a>. Thanks for stopping by🙏🏽😍
+    and here are links to my <a href="https://github.com/pestoAioli">GitHub</a> and <a href="https://linkedin.com/in/ricardomiguelriverachavez">LinkedIn</a>. Thanks for stopping by🙏🏽😍 P.S drag the screen around to move the camera🎥😀
   </p>
 </div>  
 {/if}
@@ -52,7 +51,7 @@
     padding: 15px;
     width: 5vw;
     border-radius: 6px;
-    top: 5vh;
+    top: 5px;
     left: 5vw;
     cursor: pointer;
   }
@@ -60,5 +59,11 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 24px;
     opacity: none;
+  }
+
+  @media screen and (max-width: 300px) {
+    .spiel{
+      font-size: 16px;
+    }
   }
 </style>

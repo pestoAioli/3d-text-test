@@ -7,6 +7,9 @@
   // Canvas
   const canvas = document.querySelector('canvas.webgl')
   
+  //lol it made me do this for some reason🤷🏽‍♂️
+  canvas.style.position = 'absolute';
+  
   // Scene
   const scene = new THREE.Scene()
   
@@ -70,8 +73,7 @@
       torus.scale.z = scaler;
   
       scene.add(torus);
-  }
-  console.log(scene)
+  };
   
   /**
    * Responsive Canvas
@@ -115,6 +117,9 @@
   const controls = new OrbitControls(camera, canvas)
   controls.enableDamping = true
   
+
+
+  
   
   /**
    * Animation
@@ -138,5 +143,3 @@
   }
   tick()
   </script>
-  
-  
